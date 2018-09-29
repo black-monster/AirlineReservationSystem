@@ -7,6 +7,10 @@ abstract public class User {
 	private String Password;
 	private String dob;
 	private int contact;
+	
+	public User() {
+		
+	}
 	public User(int id, String name, String email, String password, String dob, int contact) {
 		super();
 		this.id = id;
