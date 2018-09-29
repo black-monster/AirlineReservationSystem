@@ -1,26 +1,26 @@
 package com.nissan.training.airline_project.pojo;
 
 abstract public class User {
-	private int user_id;
+	private int id;
 	private String name;
 	private String email;
 	private String Password;
 	private String dob;
 	private int contact;
-	public User(int user_id, String name, String email, String password, String dob, int contact) {
+	public User(int id, String name, String email, String password, String dob, int contact) {
 		super();
-		this.user_id = user_id;
+		this.id = id;
 		this.name = name;
 		this.email = email;
 		Password = password;
 		this.dob = dob;
 		this.contact = contact;
 	}
-	public int getUser_id() {
-		return user_id;
+	public int getId() {
+		return id;
 	}
-	public void setUser_id(int user_id) {
-		this.user_id = user_id;
+	public void setId(int id) {
+		this.id = id;
 	}
 	public String getName() {
 		return name;
@@ -52,6 +52,7 @@ abstract public class User {
 	public void setContact(int contact) {
 		this.contact = contact;
 	}
+	
 	
 	
 }
