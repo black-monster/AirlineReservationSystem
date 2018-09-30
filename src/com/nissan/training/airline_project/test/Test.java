@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import com.nissan.training.airline_project.pojo.Admin;
 import com.nissan.training.airline_project.pojo.Customer;
+import com.nissan.training.airline_project.utilities.AdminView;
 import com.nissan.training.airline_project.utilities.CustomerView;
 import com.nissan.training.airline_project.utilities.LoginAdmin;
 import com.nissan.training.airline_project.utilities.LoginCustomer;
@@ -25,7 +26,7 @@ public class Test {
 			int option = input.nextInt();
 			
 			
-			// 
+			// code for register
 			if(option==1) {
 				System.out.println("REGISTER");
 				System.out.println("PRESS \n 1.User \n 2.Admin \n 3.EXIT");
@@ -47,7 +48,7 @@ public class Test {
 			}
 			
 			
-			// code for log in
+			// code for login
 			if(option==2) {
 				
 				System.out.println("PRESS \n 1.User \n 2.Admin \n 3.EXIT");
@@ -59,7 +60,7 @@ public class Test {
 							user.inputDetails();
 					
 							if( user.Verify()==true){
-								Customer customer = new Customer();
+								Customer customer = user.getDetails();
 								CustomerView view = new CustomerView();
 								view.display(customer);
 							}
@@ -72,15 +73,16 @@ public class Test {
 				if(option_login==2) {
 					
 						while(true) {
-							LoginAdmin admin = new LoginAdmin();
+							LoginAdmin loginAdmin = new LoginAdmin();
 						
-							admin.inputDetails();
-							if( admin.Verify()==true){
-								Admin admin1 = new Admin(null, null, null, null, null);
-								//AdminView view = new AdminView(admin1);
-								// view.display();
-							} 
-							if(admin.Verify()==false){
+							loginAdmin.inputDetails();							
+							if( loginAdmin.Verify()==true){
+								Admin admin1 = loginAdmin.getDetails();
+								AdminView view = new AdminView();
+								view.display(admin1);
+							}
+							
+							if(loginAdmin.Verify()==false){
 								System.out.println("IncorrectDetails");
 							}
 						}

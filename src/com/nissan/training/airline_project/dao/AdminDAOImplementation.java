@@ -2,6 +2,7 @@ package com.nissan.training.airline_project.dao;
 
 import java.sql.*;
 import com.nissan.training.airline_project.pojo.Admin;
+import com.nissan.training.airline_project.pojo.Customer;
 
 public class AdminDAOImplementation implements IAdminDAO{
 
@@ -65,6 +66,50 @@ public class AdminDAOImplementation implements IAdminDAO{
 		// TODO Auto-generated method stub
 		return 0;
 	}
+public Connection connectToDatabase() {
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver"); 
+			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/airline", "sa", "Admin1234");
+			return conn;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+		
+			e.printStackTrace();
+			
+			
+		}
+		return null;
+	
+	}
+	public Admin getAdmin(String name,String password) {
+		
+		Connection conn = connectToDatabase();
+		
+		
+		Statement st;
+		try {
+			String str = "select * from admin where name=? and password=?";
+			PreparedStatement stmt=(PreparedStatement) conn.prepareStatement(str);  
+			stmt.setString(1, name);
+			stmt.setString(2, password);  
+			ResultSet rs = stmt.executeQuery(); 
+			
+			if(rs == null)
+				return null;
+			
+			rs.next();
+			Admin admin = new Admin(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6));
+			return admin;
+			
+		} catch (SQLException e) {
+			
+		}
+	
+	return null; 
+}
+
+
 
 	
 

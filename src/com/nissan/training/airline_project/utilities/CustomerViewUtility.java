@@ -1,23 +1,26 @@
 package com.nissan.training.airline_project.utilities;
 
+import com.nissan.training.airline_project.pojo.Customer;
+
 public class CustomerViewUtility {
 
-	public void bookFlight() {
+	public void bookFlight(Customer c) {
+		// TODO Auto-generated method stub
+		
+		
+	}
+
+	public void cancelFlight(Customer c) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	public void cancelFlight() {
+	public void rescheduleFlight(Customer c) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	public void resheduleFlight() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void showBooking() {
+	public void showBooking(Customer c) {
 		// TODO Auto-generated method stub
 		
 	}

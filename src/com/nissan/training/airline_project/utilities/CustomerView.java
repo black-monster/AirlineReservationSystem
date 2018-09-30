@@ -11,8 +11,8 @@ public class CustomerView {
 		System.out.println("WELCOME,");
 		System.out.println(c.getName());
 		System.out.println("Press 1.To Book a Flight \n 2.To Cancel a Flight "
-				+ "3. To Reschedule a Flight \n 4.To Show previous Booking  "
-				+ "5. Logout");
+				+ "\n3. To Reschedule a Flight \n 4.To Show previous Booking  "
+				+ "\n5. Logout");
 		
 		while(true)
 		{
@@ -26,7 +26,7 @@ public class CustomerView {
 					break;
 				case 2: viewUtility.cancelFlight();
 					break;
-				case 3: viewUtility.resheduleFlight();
+				case 3: viewUtility.rescheduleFlight();
 					break;
 				case 4:
 					viewUtility.showBooking();

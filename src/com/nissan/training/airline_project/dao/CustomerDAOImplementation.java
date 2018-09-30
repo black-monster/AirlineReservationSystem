@@ -35,6 +35,48 @@ public class CustomerDAOImplementation implements ICustomerDAO{
 				return 0;
 	}
 
+	public Connection connectToDatabase() {
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver"); 
+			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/airline", "sa", "Admin1234");
+			return conn;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+		
+			e.printStackTrace();
+			
+			
+		}
+		return null;
+	
+	}
+	public Customer getCustomer(String name,String password) {
+		
+		Connection conn = connectToDatabase();
+		
+		
+		Statement st;
+		try {
+			String str = "select * from customer where name=? and password=?";
+			PreparedStatement stmt=(PreparedStatement) conn.prepareStatement(str);  
+			stmt.setString(1, name);
+			stmt.setString(2, password);  
+			ResultSet rs = stmt.executeQuery(); 
+			
+			if(rs == null)
+				return null;
+			
+			rs.next();
+			Customer cus = new Customer(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6));
+			return cus;
+			
+		} catch (SQLException e) {
+			
+		}
+	
+	return null; 
+}
 	@Override
 	public int showCustomer(int cust_id) {
 		// TODO Auto-generated method stub

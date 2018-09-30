@@ -6,4 +6,9 @@ public class Admin extends User{
 		super(Name,email,password,dob,contact);
 		// TODO Auto-generated constructor stub
 	}
+
+	public Admin(int int1, String string, String string2, String string3, String string4, String string5) {
+		// TODO Auto-generated constructor stub
+	}
+	
 }
