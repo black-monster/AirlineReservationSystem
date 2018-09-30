@@ -5,7 +5,7 @@ public class Customer extends User{
 public Customer() {
 		
 	}
-	public Customer(int customerId,String Name,String email,String password,String dob,int contact) {
+	public Customer(int customerId,String Name,String email,String password,String dob,String contact) {
 		super(customerId,Name,email,password,dob,contact);
 		// TODO Auto-generated constructor stub
 	}

@@ -4,9 +4,9 @@ import com.nissan.training.airline_project.pojo.Flight;
 
 public interface IFlightDAO {
 
-	abstract int addCustomer(Flight f);
-	abstract int showCustomer(int flightId);
-	abstract int showAllCustomer();
-	abstract int updateCustomer(int flightId);
-	abstract int delete(int flightId);
+	abstract int addFlight(Flight f);
+	abstract int showFlight(int flightId);
+	abstract int showAllFlight();
+	abstract int updateFlight(int flightId);
+	abstract int deleteFlight(int flightId);
 }

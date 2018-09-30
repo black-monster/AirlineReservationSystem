@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import com.nissan.training.airline_project.pojo.Admin;
 import com.nissan.training.airline_project.pojo.Customer;
+import com.nissan.training.airline_project.utilities.CustomerView;
 import com.nissan.training.airline_project.utilities.LoginAdmin;
 import com.nissan.training.airline_project.utilities.LoginCustomer;
 
@@ -21,53 +22,75 @@ public class Test {
 			if(option==1) {
 				
 				System.out.println("PRESS \n 1.User \n 2.Admin \n 3.EXIT");
+				int option_register = input.nextInt();
+				if(option_register==1) {
+					while(true) {
+//					LoginCustomer user = new LoginCustomer();
 				
-				
-			}
-			if(option==2) {
-				
-				System.out.println("PRESS \n 1.User \n 2.Admin \n 3.EXIT");
-				option = input.nextInt();
-				
-				if(option==1) {
-						while(true) {
-						LoginCustomer user = new LoginCustomer();
-						user.inputDetails();
+					}
+				}
+				if(option_register==2) {
 					
-						if( user.Verify()==true);
-						{
-							Customer customer = new Customer();
-							//CustomerView view = new CustomerView(customer);
-							// view.display();
-						}
-						if(user.Verify()==false){
-							System.out.println("IncorrectDetails");
-						}
-					}
-				} else if(option==2) {
-					LoginAdmin admin = new LoginAdmin();
-					admin.inputDetails();
-					if( admin.Verify()==true);
-					{
-						Admin admin1 = new Admin(option, null, null, null, null, option);
-						//AdminView view = new AdminView(admin1);
-						// view.display();
-					} 
-					if(admin.Verify()==false){
-						System.out.println("IncorrectDetails");
-					}
+				}
+				if(option_register==3) {
+					break;
 				}
 				
 			}
 			
+			if(option==2) {
+				
+				System.out.println("PRESS \n 1.User \n 2.Admin \n 3.EXIT");
+				int option_login = input.nextInt();
+				
+				if(option_login==1) {
+						while(true) {
+							LoginCustomer user = new LoginCustomer();
+							user.inputDetails();
+					
+							if( user.Verify()==true){
+								Customer customer = new Customer();
+								CustomerView view = new CustomerView();
+								view.display(customer);
+							}
+							
+							if(user.Verify()==false){
+								System.out.println("IncorrectDetails");
+							}
+					}
+				}  
+				if(option_login==2) {
+					
+						while(true) {
+							LoginAdmin admin = new LoginAdmin();
+						
+							admin.inputDetails();
+							if( admin.Verify()==true){
+								Admin admin1 = new Admin(0, null, null, null, null, null);
+								//AdminView view = new AdminView(admin1);
+								// view.display();
+							} 
+							if(admin.Verify()==false){
+								System.out.println("IncorrectDetails");
+							}
+						}
+				}
+				
+			
+			
+				if(option_login==3) {
+					System.out.println("Thank you");
+					break;
+			
+				}
 			if(option==3) {
+			
 				System.out.println("Thank you");
 				break;
-			
 			}
-			
 		}
-		
-		System.exit(0);
 	}
 }
+}
+	
+		

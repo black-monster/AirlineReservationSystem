@@ -4,32 +4,33 @@ import com.nissan.training.airline_project.pojo.Flight;
 
 public class FlightDAOImplementation implements IFlightDAO{
 
+
 	@Override
-	public int addCustomer(Flight f) {
+	public int addFlight(Flight f) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int showCustomer(int flightId) {
+	public int showFlight(int flightId) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int showAllCustomer() {
+	public int showAllFlight() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int updateCustomer(int flightId) {
+	public int updateFlight(int flightId) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int delete(int flightId) {
+	public int deleteFlight(int flightId) {
 		// TODO Auto-generated method stub
 		return 0;
 	}

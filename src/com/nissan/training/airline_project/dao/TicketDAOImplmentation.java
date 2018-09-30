@@ -5,25 +5,25 @@ import com.nissan.training.airline_project.pojo.Ticket;
 public class TicketDAOImplmentation implements ITicketDAO{
 
 	@Override
-	public int addCustomer(Ticket t) {
+	public int addTicket(Ticket t) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int showCustomer(int ticketId) {
+	public int showTicket(int ticketId) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int showAllCustomer() {
+	public int showAllTicket() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int updateCustomer(int ticketID) {
+	public int updateTicket(int ticketID) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
@@ -33,5 +33,7 @@ public class TicketDAOImplmentation implements ITicketDAO{
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+	
 
 }

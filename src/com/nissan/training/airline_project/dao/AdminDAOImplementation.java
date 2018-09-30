@@ -5,25 +5,25 @@ import com.nissan.training.airline_project.pojo.Admin;
 public class AdminDAOImplementation implements IAdminDAO{
 
 	@Override
-	public int addCustomer(Admin c) {
+	public int addAdmin(Admin c) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int showCustomer(int id) {
+	public int showAdmin(int id) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int showAllCustomer() {
+	public int showAllAdmin() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int updateCustomer(int id) {
+	public int updateAdmin(int id) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
@@ -33,5 +33,7 @@ public class AdminDAOImplementation implements IAdminDAO{
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+	
 
 }

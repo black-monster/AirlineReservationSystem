@@ -6,12 +6,12 @@ abstract public class User {
 	private String email;
 	private String Password;
 	private String dob;
-	private int contact;
+	private String contact;
 	
 	public User() {
 		
 	}
-	public User(int id, String name, String email, String password, String dob, int contact) {
+	public User(int id, String name, String email, String password, String dob, String contact) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -50,10 +50,10 @@ abstract public class User {
 	public void setDob(String dob) {
 		this.dob = dob;
 	}
-	public int getContact() {
+	public String getContact() {
 		return contact;
 	}
-	public void setContact(int contact) {
+	public void setContact(String contact) {
 		this.contact = contact;
 	}
 	
