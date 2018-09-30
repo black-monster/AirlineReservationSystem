@@ -5,6 +5,7 @@ public class Flight {
 	private String arrivalTime;
 	private String departureTime;
 	private String origin;
+	private String destination;
 	private String company;
 	private int flight_number;
 	private int seatsAvailable;
@@ -13,12 +14,13 @@ public class Flight {
 	
 	
 	public Flight(int flightId, String arrivalTime, String departureTime, String origin, String company,
-			int flight_number, int seatsAvailable, String status, String type) {
+			String destination,int flight_number, int seatsAvailable, String status, String type) {
 		super();
 		this.flightId = flightId;
 		this.arrivalTime = arrivalTime;
 		this.departureTime = departureTime;
 		this.origin = origin;
+		this.destination = destination;
 		this.company = company;
 		this.flight_number = flight_number;
 		this.seatsAvailable = seatsAvailable;
@@ -26,6 +28,14 @@ public class Flight {
 		this.type = type;
 	}
 	
+	public String getDestination() {
+		return destination;
+	}
+
+	public void setDestination(String destination) {
+		this.destination = destination;
+	}
+
 	public int getFlightId() {
 		return flightId;
 	}

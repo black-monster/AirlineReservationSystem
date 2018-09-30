@@ -11,9 +11,8 @@ abstract public class User {
 	public User() {
 		
 	}
-	public User(int id, String name, String email, String password, String dob, String contact) {
+	public User(String name, String email, String password, String dob, String contact) {
 		super();
-		this.id = id;
 		this.name = name;
 		this.email = email;
 		Password = password;

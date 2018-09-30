@@ -54,6 +54,8 @@ abstract public class Register {
 		name = input.nextLine();
 		System.out.println("Email");
 		password = input.nextLine();
+		System.out.println("Password");
+		password = input.nextLine();
 		System.out.println("Date of Birth");
 		dob = input.nextLine();
 		System.out.println("Contact");

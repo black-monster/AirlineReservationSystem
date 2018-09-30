@@ -7,30 +7,38 @@ import com.nissan.training.airline_project.pojo.Customer;
 import com.nissan.training.airline_project.utilities.CustomerView;
 import com.nissan.training.airline_project.utilities.LoginAdmin;
 import com.nissan.training.airline_project.utilities.LoginCustomer;
+import com.nissan.training.airline_project.utilities.RegisterAdmin;
+import com.nissan.training.airline_project.utilities.RegisterCustomer;
 
 public class Test {
 
+	/**
+	 * @param args
+	 */
 	public static void main(String args[]) {
 	
 		while(true) {
 			
 			System.out.println("WELCOME TO AIRLINE RESERVATION SYSTEM");
-			System.out.println("PRESS \n 1.REGISTER \n 2.LOGIN \n 3.EXIT");
+		System.out.println("PRESS \n 1.REGISTER \n 2.LOGIN \n 3.EXIT");
 			Scanner input = new Scanner(System.in);
 			int option = input.nextInt();
 			
+			
+			// 
 			if(option==1) {
-				
+				System.out.println("REGISTER");
 				System.out.println("PRESS \n 1.User \n 2.Admin \n 3.EXIT");
 				int option_register = input.nextInt();
 				if(option_register==1) {
-					while(true) {
-//					LoginCustomer user = new LoginCustomer();
-				
-					}
+					RegisterCustomer registerUser = new RegisterCustomer();
+					registerUser.inputDetails();
+					registerUser.register();
 				}
 				if(option_register==2) {
-					
+					RegisterAdmin registerAdmin = new RegisterAdmin();
+					registerAdmin.inputDetails();
+					registerAdmin.register();
 				}
 				if(option_register==3) {
 					break;
@@ -38,6 +46,8 @@ public class Test {
 				
 			}
 			
+			
+			// code for log in
 			if(option==2) {
 				
 				System.out.println("PRESS \n 1.User \n 2.Admin \n 3.EXIT");
@@ -66,7 +76,7 @@ public class Test {
 						
 							admin.inputDetails();
 							if( admin.Verify()==true){
-								Admin admin1 = new Admin(0, null, null, null, null, null);
+								Admin admin1 = new Admin(null, null, null, null, null);
 								//AdminView view = new AdminView(admin1);
 								// view.display();
 							} 
@@ -83,12 +93,13 @@ public class Test {
 					break;
 			
 				}
+			}
 			if(option==3) {
 			
 				System.out.println("Thank you");
 				break;
 			}
-		}
+		
 	}
 }
 }

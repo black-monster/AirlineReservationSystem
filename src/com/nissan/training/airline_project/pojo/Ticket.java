@@ -4,19 +4,17 @@ public class Ticket {
 	private int ticketId;
 	private int flightId;
 	private int custId;
-	private String bookingTime;
 	private String passengerName;
 	private String passengerDOB;
 	private String passengerEmail;
 	private String passengerContactNo;
 	private String ticketStatus;
-	public Ticket(int ticketId, int flightId, int custId, String bookingTime, String passengerName, String passengerDOB,
+	public Ticket(int ticketId, int flightId, int custId, String passengerName, String passengerDOB,
 			String passengerEmail, String passengerContactNo, String ticketStatus) {
 		super();
 		this.ticketId = ticketId;
 		this.flightId = flightId;
 		this.custId = custId;
-		this.bookingTime = bookingTime;
 		this.passengerName = passengerName;
 		this.passengerDOB = passengerDOB;
 		this.passengerEmail = passengerEmail;
@@ -41,12 +39,7 @@ public class Ticket {
 	public void setCustId(int custId) {
 		this.custId = custId;
 	}
-	public String getBookingTime() {
-		return bookingTime;
-	}
-	public void setBookingTime(String bookingTime) {
-		this.bookingTime = bookingTime;
-	}
+	
 	public String getPassengerName() {
 		return passengerName;
 	}
