@@ -28,6 +28,11 @@ public class Flight {
 		this.type = type;
 	}
 	
+	public Flight(int flightId2, String string, String string2, String string3, String string4, String string5,
+			int int1, int int2) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getDestination() {
 		return destination;
 	}
@@ -89,6 +94,13 @@ public class Flight {
 	}
 	public void setType(String type) {
 		this.type = type;
+	}
+
+	
+
+	public int getNumberOfSeats() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 	

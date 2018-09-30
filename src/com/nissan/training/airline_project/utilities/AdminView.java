@@ -22,15 +22,15 @@ public void display(Admin c) {
 			CustomerViewUtility viewUtility = new  CustomerViewUtility();
 			switch(option) {
 			
-				case 1: viewUtility.bookFlight();
-					break;
-				case 2: viewUtility.cancelFlight();
-					break;
-				case 3: viewUtility.rescheduleFlight();
-					break;
-				case 4:
-					viewUtility.showBooking();
-					break;
+//				case 1: viewUtility.bookFlight();
+//					break;
+//				case 2: viewUtility.cancelFlight();
+//					break;
+//				case 3: viewUtility.rescheduleFlight();
+//					break;
+//				case 4:
+//					viewUtility.showBooking();
+//					break;
 				case 5: System.out.println("Thank You");
 					break;
 			}

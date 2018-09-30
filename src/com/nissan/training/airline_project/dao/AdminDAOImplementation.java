@@ -2,7 +2,6 @@ package com.nissan.training.airline_project.dao;
 
 import java.sql.*;
 import com.nissan.training.airline_project.pojo.Admin;
-import com.nissan.training.airline_project.pojo.Customer;
 
 public class AdminDAOImplementation implements IAdminDAO{
 

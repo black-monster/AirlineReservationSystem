@@ -4,9 +4,11 @@ import com.nissan.training.airline_project.pojo.Flight;
 
 public interface IFlightDAO {
 
-	abstract int addFlight(Flight f);
-	abstract int showFlight(int flightId);
-	abstract int showAllFlight();
-	abstract int updateFlight(int flightId);
-	abstract int deleteFlight(int flightId);
+	public void addFlight(String arrivalTime, String departureTime, String source,
+			String destination, String airline, int numOfSeats, int status) ;
+	abstract void showAllFlight();
+	abstract void deleteFlight(int flightId);
+	public Flight showFlight(int flightId);
+	public void updateFlight(int flightId, String arrivalTime, String departureTime, String source,
+			String destination, String airline, int numOfSeats, int status);
 }

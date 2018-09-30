@@ -22,14 +22,14 @@ public class CustomerView {
 			CustomerViewUtility viewUtility = new  CustomerViewUtility();
 			switch(option) {
 			
-				case 1: viewUtility.bookFlight();
+				case 1: viewUtility.bookFlight(c);
 					break;
-				case 2: viewUtility.cancelFlight();
+				case 2: viewUtility.cancelFlight(c);
 					break;
-				case 3: viewUtility.rescheduleFlight();
+				case 3: viewUtility.resheduleFlight(c);
 					break;
 				case 4:
-					viewUtility.showBooking();
+					viewUtility.showBooking(c);
 					break;
 				case 5: System.out.println("Thank You");
 					break;
